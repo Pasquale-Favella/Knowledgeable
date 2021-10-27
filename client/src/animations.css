@@ -1,0 +1,71 @@
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes topBounce {
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(25px);
+    }
+}
+
+@keyframes leftBounce {
+    0%,100%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(25px);
+    }
+}
+
+@keyframes fadeInTop {
+    0%{
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes preloader {
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes pulseTheme {
+    0% {
+      transform:  rotate(180deg) scale(0.3);
+      opacity: 0.3;
+    }
+    50% {
+        transform:  rotate(90deg) scale(0.5);
+        opacity: 0.5;
+    }
+    75% {
+        transform:  rotate(45deg) scale(0.7);
+        opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes shine {
+    to {
+      background-position-x: -200%;
+    }
+}

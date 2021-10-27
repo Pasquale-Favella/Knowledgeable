@@ -1,0 +1,9 @@
+.results-error{
+    color: rgb(253, 63, 63);
+    margin-left: 20px;
+}
+
+.results-notfound{
+    color:var(--skin-color);
+    margin-left: 20px;
+}

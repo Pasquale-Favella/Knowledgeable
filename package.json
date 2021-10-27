@@ -1,0 +1,19 @@
+{
+  "name": "Knowledgeable",
+  "version": "1.0.0",
+  "description": "Search engine powered by wiki api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Favella Pasquale",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

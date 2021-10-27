@@ -1,0 +1,29 @@
+.header{
+    padding: 20px 15px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    top:0;
+    left: 0;
+    z-index: 99;
+}
+
+.header .logo a{
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    height: 40px;
+    width: 40px;
+    font-size: 24px;
+    color: var(--skin-color);
+    border-radius: 50%;
+    border: 2px solid var(--skin-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header .header__search{
+    padding-top: 25px;
+    margin-left: auto;
+    width: 10%;
+}

@@ -1,0 +1,153 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999999999999999999999;
+}
+
+.backdrop .modal{
+    margin: 20px;
+    padding: 10px 20px 10px;
+    height: auto;
+    border-radius: 5px;
+    background-color: var(--bg-black-50);
+}
+
+.backdrop .modal .close{
+    height: 35px;
+    width: 35px;
+    display: block;
+    font-size: 35px;
+    line-height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    text-align: center;
+    color: var(--text-black-600);
+    transition: all 0.3s ease;
+}
+
+.backdrop .modal .close:after{
+    border-radius: 50%;
+}
+
+.backdrop .modal .modal-content a{
+    padding: 5px 25px;
+    margin-top: 15px;
+}
+
+.backdrop .modal .modal-content .modal-body{
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.backdrop .modal .modal-content .modal-body .modal-heading{
+    display: flex;
+}
+
+.backdrop .modal .modal-content img{
+    border-radius: 5px;
+    max-width: 40%;
+    max-height: 200px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.backdrop .modal .modal-title{
+    color:var(--skin-color);
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    max-width: 80%;
+}
+
+.backdrop .modal .modal-wiki-content{
+    color: var(--text-black-600);
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.backdrop .modal .modal-wiki-content .searchmatch{
+    color:var(--skin-color);
+}
+
+.backdrop .modal .modal-content .modal-body .modal-related{
+    margin-top: 10px;
+}
+
+.backdrop .modal .modal-content .modal-body .modal-related h3{
+    color: var(--text-black-700);
+    margin: 10px 0;
+}
+
+.backdrop .modal .modal-content .modal-body .modal-related .modal-related-items{
+    word-wrap: break-word;
+}
+
+.backdrop .modal .modal-content .modal-body .modal-related .modal-related-hints{
+    color: var(--skin-color-mat);
+    cursor: pointer;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.backdrop .modal .modal-content .modal-body .modal-related .modal-related-hints:hover{
+    color: var(--skin-color);
+}
+
+
+@media(max-width:767px){
+    
+    .backdrop .modal .close{
+        top: 10px;
+    }
+
+    .backdrop .modal .modal-content .modal-body .modal-heading{
+        flex-direction: column;
+    }
+
+    .backdrop .modal .modal-wiki-content{
+        margin-left: 0;
+        padding: 5px;
+    }
+
+    .backdrop .modal .modal-content a{
+        padding: 0px 25px;
+        margin-top: 5px;
+    }
+
+    .backdrop .modal .modal-content img{
+        margin: 0 auto;
+        max-width: 90%;
+        max-height: 300px;
+    }
+
+    .backdrop .modal .modal-title{
+        font-size: 20px;
+    }
+
+    .backdrop .modal .modal-content .modal-body .modal-related{
+        margin-top: 5px;
+    }
+
+    .backdrop .modal .modal-content .modal-body .modal-related h3{
+        margin: 5px auto;
+    }
+}
+
+@media(max-width:574px){
+    
+    .backdrop .modal .modal-content img{
+        max-height: 210px;
+    }
+
+    .backdrop .modal .modal-content a{
+        padding: 0px 25px;
+        margin-top: 15px;
+    }
+    
+}

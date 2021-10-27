@@ -1,0 +1,37 @@
+.notfound-section{
+    position: relative;
+}
+
+.notfound-section .full-screen{
+    padding: 100px 0 0 0;
+    min-height: 100vh;
+}
+
+.notfound-section .align-items-center{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.notfound-section .notfound-text-404 {
+    font-size: 120px;
+    font-weight: 700;
+    color: var(--skin-color);
+    margin: 0;
+}
+
+.notfound-section .notfound-text {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--skin-color);
+    margin: 0;
+}
+
+.notfound-section .btn{
+    padding: 5px 25px;
+    margin: 20px auto;
+    height: 35px;
+    width: 130px;
+}
