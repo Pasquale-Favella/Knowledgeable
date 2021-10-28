@@ -1,5 +1,5 @@
 const axios = require('axios');
-const Contants = require('../constants/constants');
+const Constants = require('../constants/constants');
 
 const search = async ( term )=>{
 
@@ -8,7 +8,7 @@ const search = async ( term )=>{
             data :{
                 query :{ search },
             }
-        } = await axios.get(`${Contants.WIKI_API_DETAILS_URL}${term}`);
+        } = await axios.get(`${Constants.WIKI_API_DETAILS_URL}${term}`);
         
         const searches = await searchThumbnails(search);
 
@@ -26,7 +26,7 @@ const searchThumbnails= async (searches)=>{
         searches.map(async (search)=>{
 
             try {
-                const { data :{ query : {pages}}} =  await axios.get(`${Contants.WIKI_API_THUMB_URL}${encodeURIComponent(search.title)}`);
+                const { data :{ query : {pages}}} =  await axios.get(`${Constants.WIKI_API_THUMB_URL}${encodeURIComponent(search.title)}`);
 
                 const {thumbnail  , terms :{ alias , description}} = pages[0];
                 
@@ -43,10 +43,10 @@ const searchSuggest = async (term)=>{
 
     try {
 
-        const { data } = await axios.get(`${Contants.WIKI_API_SUGGEST_URL}${term}`);
+        const { data } = await axios.get(`${Constants.WIKI_API_SUGGEST_URL}${term}`);
 
-        const searchSuggestions = data[ Contants.WIKI_API_SUGGEST_KEY ];
-        const suggestionUrls = data[ Contants.WIKI_API_SUGGEST_URLS ];
+        const searchSuggestions = data[ Constants.WIKI_API_SUGGEST_KEY ];
+        const suggestionUrls = data[ Constants.WIKI_API_SUGGEST_URLS ];
     
         const formattedResponse = searchSuggestions.map( 
          (suggestion,idx)=> ({searchSuggestion:suggestion , wikiUrl : suggestionUrls[idx]})
