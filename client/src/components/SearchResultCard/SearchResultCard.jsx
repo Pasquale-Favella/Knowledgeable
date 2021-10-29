@@ -35,7 +35,7 @@ export const SearchResultCard = ({item,isLoading=false})=>{
                 </div>
                 {
                     isLoading ? <p className="loading-title outer-shadow"></p>
-                    : <p className="result-card-title">{item.title}</p>
+                    : <p className="result-card-title" onClick={handleDetailsClick}>{item.title}</p>
                 }
                 
             </div>

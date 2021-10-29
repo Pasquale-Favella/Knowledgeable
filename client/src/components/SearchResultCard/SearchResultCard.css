@@ -59,8 +59,9 @@
     text-transform: capitalize;
 }
 
-
-
+.result-card .result-card-body .result-card-title:hover{ 
+    color: var(--skin-color);
+}
 
 .result-card .loading-image,
 .result-card .loading-title {
