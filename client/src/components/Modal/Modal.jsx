@@ -9,6 +9,7 @@ import { useEffect, useRef } from 'react';
 import { useClickOutside } from '../../hooks/useClickOutside';
 import { backdrop, modal } from '../../animation/variants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 
 
@@ -80,7 +81,8 @@ export const Modal = ()=>{
                                     
                                 ) }
                                 
-                                <a href={modalContent.sourceUrl} target="_blank" rel="noreferrer" className="btn outer-shadow hover-in-shadow"><FontAwesomeIcon icon={['fab', 'wikipedia-w']} /><span> Insights</span></a>
+                                {/*<a href={modalContent.sourceUrl} target="_blank" rel="noreferrer" className="btn outer-shadow hover-in-shadow"><FontAwesomeIcon icon={['fab', 'wikipedia-w']} /><span> Insights</span></a>*/}
+                                <Link className="btn outer-shadow hover-in-shadow" to={`/wiki/${modalContent.title}`}><FontAwesomeIcon icon={['fab', 'wikipedia-w']} /><span> Insights</span></Link>
                             </div>
                         </div>
                         

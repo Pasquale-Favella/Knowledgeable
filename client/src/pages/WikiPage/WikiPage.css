@@ -1,0 +1,52 @@
+.wiki-page-section{
+    padding: 80px 0 80px;
+    min-height: 100vh;
+    color: var(--text-black-600);
+}
+
+.wiki-page-container{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.wiki-page-container svg,
+.wiki-page-container h1,
+.wiki-page-container h2,
+.wiki-page-container h3{
+    color: var(--skin-color);
+}
+
+
+.wiki-page-container h1,
+.wiki-page-container h2,
+.wiki-page-container h3{
+    text-align: center;
+}
+
+.wiki-page-container .wiki-page-loader{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+.wiki-page-container a{
+    color: var(--skin-color-mat);
+}
+
+.wiki-page-container a:hover{
+    color: var(--skin-color);
+}
+
+.wiki-page-container th{
+    background: var(--bg-black-50) !important;
+    box-shadow: var(--outer-shadow);
+    padding: 10px;
+}
+
+.wiki-page-container table{
+    border-spacing: 15px;
+}
+
+

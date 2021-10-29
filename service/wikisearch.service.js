@@ -60,7 +60,18 @@ const searchSuggest = async (term)=>{
    
 }
 
+const getPageHtmlByTitle = async (title)=>{
+    title = decodeURIComponent(title)
+    console.log(title)
+    const { data } = await axios.get(`${Constants.WIKI_API_HTML}${title}`);
+    const {parse} = data;
+    const {text ,pageid} = parse;
+    const html = text[Object.keys(text)[0]];
+    return { title , pageid , html };
+}
+
 module.exports = {
     search,
-    searchSuggest
+    searchSuggest,
+    getPageHtmlByTitle
 }

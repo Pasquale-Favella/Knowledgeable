@@ -16,26 +16,26 @@ export const Results = ()=>{
 
     return (
         
-      <motion.section className="results-section section" 
-        variants={resultPageVariant}
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        transition={resultPageTransition}
-      >
-        <div className="container">
-          
-          <div className="section-title">
-            <h2 data-heading={decodeURIComponent(searchTerm)}>Results</h2>
-          </div>
-          
-          <div className="row">
-            <div className="results-filter">
-              <SearchForm/>
+          <motion.section className="results-section section" 
+            variants={resultPageVariant}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            transition={resultPageTransition}
+          >
+            <div className="container">
+              
+              <div className="section-title">
+                <h2 data-heading={decodeURIComponent(searchTerm)}>Results</h2>
+              </div>
+              
+              <div className="row">
+                <div className="results-filter">
+                  <SearchForm/>
+                </div>
+              </div>
+              <SearchResultList />
             </div>
-          </div>
-          <SearchResultList />
-        </div>
-      </motion.section>
+          </motion.section>
     )
 }

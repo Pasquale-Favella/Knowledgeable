@@ -6,15 +6,17 @@ import {
     Switch,
     Route
 } from "react-router-dom";
+import { WikiPage } from "../../pages/WikiPage/WikiPage";
 
 export const Root = ({location})=>{
     return (
-        <AnimatePresence >
+        <AnimatePresence exitBeforeEnter>
             <Switch location={location} key={location.pathname}>
 
               <Route path="/" component={Home} exact key="home"/>
                 
               <Route path="/search/:term" component={Results}  key="results"/>
+              <Route path="/wiki/:title" component={WikiPage}  key="wikipage"/>
               <Route  component={NotFound}  key="notfound"/>  
 
             </Switch>

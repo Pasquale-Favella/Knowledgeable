@@ -7,6 +7,7 @@ const CacheTime = require('../constants/cache.constants');
 route
     .get('/', Cache.cacheFor(CacheTime.HOUR) , WikiController.search)
     .get('/suggest', Cache.cacheFor(CacheTime.HALF_HOUR) ,WikiController.searchSuggestions)
+    .get('/page/:title', WikiController.getWikiPage )
     .get('/cache',(ctx)=>ctx.res.json(Cache.index()))
 
 
