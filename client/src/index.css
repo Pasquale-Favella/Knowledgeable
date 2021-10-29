@@ -40,6 +40,9 @@ body{
   background-color: var(--bg-black-50);
   overflow-x: hidden;
 }
+body.overflowYHidden{
+  overflow-y: hidden;
+}
 
 *{
   margin: 0;

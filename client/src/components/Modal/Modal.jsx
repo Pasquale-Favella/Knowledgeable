@@ -5,7 +5,7 @@ import logoLight from '../../assets/logo-light.png';
 import { AnimatePresence ,motion } from 'framer-motion';
 import { useAtom } from 'jotai';
 import { isThemeDarkAtom, modalAtom, modalContentAtom, searchTermAtom, searchTermSuggestAtom } from '../../state/atoms';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useClickOutside } from '../../hooks/useClickOutside';
 import { backdrop, modal } from '../../animation/variants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -27,6 +27,15 @@ export const Modal = ()=>{
         setSearchTerm(hint);
         setShow(false);
     }
+
+
+    useEffect(()=>{
+        if(show)
+            document.body.classList.add('overflowYHidden');
+        else
+            document.body.classList.remove('overflowYHidden');
+        
+    },[show])
 
 
     return (
