@@ -26,7 +26,7 @@ export const Home = ()=>{
                     <div className="home-text">
                         <p>Powered thanks to Wikipedia</p>
                         <h2>knowledgeable</h2>
-                        <h1>Find everithing you need</h1>
+                        <h1>Find everything you need</h1>
                         <SearchForm/>
                     </div>
                     <div className="home-img">
